@@ -120,7 +120,7 @@ export default defineComponent({
   methods: {
     onConnect() {
       console.log("Starting connection to WebSocket Server")
-      this.connection = new WebSocket("ws://localhost:3003/ws/room1/arman")
+      this.connection = new WebSocket(`ws://localhost:3003/ws/${this.room}/${this.name}`)
       const store = this.$store
       const chats = this.chats
 
